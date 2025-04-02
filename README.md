@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # User Management System
 
 A Flask-based User Management System with features for user authentication, registration, and profile management.
@@ -104,3 +105,7 @@ User-Management-System/
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details. 
+=======
+# User-Management-System
+A Flask-based User Management System with authentication and profile management
+>>>>>>> 818f7d518f8c5db6e6b9f44d029e1477ad7f8061
