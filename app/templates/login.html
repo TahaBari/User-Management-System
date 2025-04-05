@@ -1,38 +1,38 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="row justify-content-center">
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh; background-color: #121212;">
         <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">
-                    <h1 class="text-center">Sign In</h1>
+            <div class="card shadow-lg" style="background-color: #1e1e2e; color: #ffffff; border-radius: 16px; overflow: hidden;">
+                <div class="card-header text-center" style="background: linear-gradient(135deg, #6a11cb, #2575fc); padding: 20px; border-radius: 16px 16px 0 0;">
+                    <h1 style="color: #ffffff; font-weight: bold;">Sign In</h1>
                 </div>
-                <div class="card-body">
+                <div class="card-body p-4">
                     <form action="" method="post" novalidate>
                         {{ form.hidden_tag() }}
                         <div class="mb-3">
-                            {{ form.username.label(class="form-label") }}
-                            {{ form.username(class="form-control") }}
+                            {{ form.username.label(class="form-label", style="color: #c3c3c3;") }}
+                            {{ form.username(class="form-control", style="background-color: #28293d; color: #ffffff; border: none; border-radius: 8px; padding: 10px;") }}
                             {% for error in form.username.errors %}
                                 <span class="text-danger">{{ error }}</span>
                             {% endfor %}
                         </div>
                         <div class="mb-3">
-                            {{ form.password.label(class="form-label") }}
-                            {{ form.password(class="form-control") }}
+                            {{ form.password.label(class="form-label", style="color: #c3c3c3;") }}
+                            {{ form.password(class="form-control", style="background-color: #28293d; color: #ffffff; border: none; border-radius: 8px; padding: 10px;") }}
                             {% for error in form.password.errors %}
                                 <span class="text-danger">{{ error }}</span>
                             {% endfor %}
                         </div>
                         <div class="d-grid">
-                            {{ form.submit(class="btn btn-primary") }}
+                            {{ form.submit(class="btn", style="background: linear-gradient(135deg, #ff9a9e, #fad0c4); color: #121212; padding: 12px; font-weight: bold; border-radius: 8px; border: none;") }}
                         </div>
                     </form>
                 </div>
-                <div class="card-footer text-center">
-                    <p>New User? <a href="{{ url_for('auth.register') }}">Click to Register!</a></p>
+                <div class="card-footer text-center" style="background-color: #28293d; border-radius: 0 0 16px 16px;">
+                    <p style="color: #c3c3c3;">New User? <a href="{{ url_for('auth.register') }}" style="color: #4a90e2; text-decoration: none;">Click to Register!</a></p>
                 </div>
             </div>
         </div>
     </div>
-{% endblock %} 
+{% endblock %}
